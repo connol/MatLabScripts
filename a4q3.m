@@ -1,0 +1,18 @@
+A=ugly(10);
+x=[-1;1;1;1;1;1;1;1;1;1];
+b= A*x;
+bt = b;
+bt(10 , 1) = 1.01;
+xt = A\bt;
+f = norm(x-xt,inf)/norm(x,inf);
+s = (norm(b-bt,inf)/norm(b,inf));
+fprintf("----------xt---------- \n");
+disp(xt);
+fprintf("----------b---------- \n");
+disp(b);
+fprintf("----------bt---------- \n");
+disp(bt);
+fprintf("----------b-bt---------- \n");
+disp(b-bt);
+fprintf("----------error---------- \n");
+display(f/s);
